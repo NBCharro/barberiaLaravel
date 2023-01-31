@@ -1,0 +1,37 @@
+#inicio {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/images/backgroundBarberia.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#tablaCarrito img,
+#tablaCompraRealizada img {
+    width: 100px;
+}
+
+footer ul img {
+    width: 24px;
+    height: 24px;
+}
