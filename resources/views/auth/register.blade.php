@@ -3,6 +3,7 @@
 @section('content')
     <h1 class="link-info h1 py-3">Regístrate para hacer tus compras en línea</h1>
     <hr>
+    <br>
     <div class="row g-0 text-center">
         <div class="col-2"></div>
 
@@ -65,17 +66,14 @@
                         autocomplete="new-password" placeholder="Vuelva a introducir su contraseña">
                 </div>
             </div>
-
-            <div class="row mb-0 ">
-                <div class="col-md-6 offset-md-4">
-                    <button type="submit" class="btn btn-lg btn-info fw-bold border-white">
-                        {{ __('Register') }}
-                    </button>
-                    <a href="{{ route('inicio') }}" class="btn btn-lg btn-info fw-bold border-white">
-                        Volver
-                    </a>
-                </div>
-            </div>
+            <br>
+            <hr class="my-4">
+            <button type="submit" class="btn btn-lg btn-info fw-bold border-white">
+                {{ __('Register') }}
+            </button>
+            <a href="{{ route('inicio') }}" class="btn btn-lg btn-info fw-bold border-white">
+                Volver
+            </a>
         </form>
     </div>
 @endsection

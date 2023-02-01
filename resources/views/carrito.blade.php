@@ -18,6 +18,7 @@
     @endphp
     <h1 class="link-info h1 py-3">Carrito</h1>
     <hr>
+    <br>
     <form action="{{ route('actualizarCantidadCarrito') }}" method="post">
         @csrf
         <table class="table table-dark table-striped table-hover" id="tablaCarrito">

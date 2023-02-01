@@ -4,6 +4,7 @@
     <h1 class="link-info h1">Contacto</h1>
     <p class="lead">Si quieres contactar con nosotros rellena el siguiente formulario</p>
     <hr>
+    <br>
     <div class="container">
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -44,7 +45,8 @@
                             <div class="col-sm-6">
                                 <label for="telefono" class="form-label">Teléfono <span
                                         class="text-muted">(Opcional)</span></label>
-                                <input type="text" class="form-control" id="telefono" name="telefono">
+                                <input type="text" class="form-control" id="telefono" name="telefono"
+                                    placeholder="Teléfono">
                             </div>
 
                             <div class="col-12">

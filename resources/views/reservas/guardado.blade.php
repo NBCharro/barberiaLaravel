@@ -9,6 +9,7 @@
     @endphp
     <h1 class="link-info h1">{{ $servicio }}</h1>
     <hr>
+    <br>
     <div class='container-fluid'>
         <h2>{{ $nombre }} has hecho una reserva para las {{ $hora }} h</h2>
         <h2>del {{ $dia }} de {{ $meses[$mes] }} de {{ $year }}</h2>

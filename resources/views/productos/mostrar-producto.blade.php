@@ -3,6 +3,7 @@
 @section('content-area')
     <h1 class="link-info h1 py-3">{{ $producto->nombre }}</h1>
     <hr>
+    <br>
     <form action="{{ route('actualizarCarrito') }}" method="post">
         @csrf
         <div class="row featurette pb-4 pt-4">

@@ -3,6 +3,7 @@
 @section('content-area')
     <h1 class="link-info h1 py-3">Servicios</h1>
     <hr>
+    <br>
     <div class="row featurette">
         <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">

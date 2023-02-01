@@ -4,6 +4,7 @@
     <div class="alert alert-danger" role="alert">
         <h1 class="link-primary h1 py-3">Reservar cita</h1>
         <hr>
+        <br>
         <h3>{{ $mensajeError1 }}</h3>
         <br>
         @if (isset($mensajeError2))

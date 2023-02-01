@@ -3,6 +3,7 @@
 @section('content-area')
     <h1 class="link-info h1">Compra realizada</h1>
     <hr>
+    <br>
     @php
         $total = 0;
         foreach ($productosComprados as $producto) {

@@ -3,6 +3,7 @@
 @section('content-area')
     <h1 class="link-info h1 py-3">Reservar cita</h1>
     <hr>
+    <br>
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
@@ -26,15 +27,15 @@
                                 value="{{ old('nombre') }}">
                         </div>
                         <div class="col-sm-6">
-                            <label for="telefono" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Telefono"
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"
                                 value="{{ old('telefono') }}">
                         </div>
 
                         <div class="col-12 py-5">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email"
-                                placeholder="tunombre@email.com" value="{{ old('email') }}">
+                                placeholder="nombre@email.com" value="{{ old('email') }}">
                         </div>
 
                         <div class="col-sm-6">

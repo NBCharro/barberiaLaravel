@@ -3,6 +3,7 @@
 @section('content-area')
     <h1 class="link-info h1">Contacto</h1>
     <hr>
+    <br>
     <div class="container">
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -17,7 +18,7 @@
             <div class="row g-5">
                 <div class="col-md-5 col-lg-6">
                     <div class="p-4 text-bg-dark rounded-3">
-                        <h2>Telefono</h2>
+                        <h2>Teléfono</h2>
                         <p class="lead">111 222 333</p>
                     </div>
                     <div class="p-4 text-bg-dark rounded-3">
@@ -30,12 +31,18 @@
                     </div>
                 </div>
                 <div class="col-md-7 col-lg-6">
-                    <h3 class="link-info">Su mensaje se ha enviado correctamente</h1>
-                        <p class="lead">
-                            <a href="{{ route('inicio') }}" class="btn btn-lg btn-info fw-bold border-white">
-                                Volver
-                            </a>
-                        </p>
+                    <br>
+                    <br>
+                    <br>
+                    <h3 class="link-info">Su mensaje se ha enviado correctamente</h3>
+                    <br>
+                    <br>
+                    <br>
+                    <p class="lead">
+                        <a href="{{ route('inicio') }}" class="btn btn-lg btn-info fw-bold border-white">
+                            Volver
+                        </a>
+                    </p>
                 </div>
             </div>
         </main>
