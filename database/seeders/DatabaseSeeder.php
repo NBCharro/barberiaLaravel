@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\User;
+use App\Models\Reserva;
+use App\Models\Producto;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,8 +17,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Producto::factory(100)->create();
-        // Reserva::factory(100)->create();
+        Producto::factory(100)->create();
+
+        Reserva::factory(100)->create();
 
         User::factory()->create([
             'name' => 'user',
