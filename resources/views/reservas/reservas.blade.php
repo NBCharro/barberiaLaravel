@@ -109,24 +109,34 @@
     </div>
     <script>
         const datosCitas = @json($citas);
-        console.log(datosCitas);
 
         const fecha = document.getElementById("fecha");
         const hora = document.getElementById("hora");
         const trabajadora = document.getElementById("trabajadora");
         const botonReservar = document.getElementById("botonReservar");
 
+        comprobarDisponibilidad();
+
         fecha.addEventListener('change', comprobarDisponibilidad)
         hora.addEventListener('change', comprobarDisponibilidad)
         trabajadora.addEventListener('change', comprobarDisponibilidad)
 
         function comprobarDisponibilidad() {
+            // Si es fin de semana, bloqueo el boton y retorno la funcion ya que no quiero hacer mas calculos
+            if (esFinDeSemana()) {
+                botonReservar.disabled = true
+                return
+            }
+
             botonReservar.disabled = false
 
             let numeroTrabajadoras = 0;
 
+            // Recorro todas las fechas
             datosCitas.forEach(element => {
+                // Si la fecha y la hora de mi BD coincide con lo elegido aumento el numero de trabajadoras
                 if (coincideFechaYHora(element)) {
+                    // Si ademas, la trabajadora esta ocupada a esa hora, directamente bloqueo el boton de reservar cita
                     if (disponibilidadEmpleadaElegida(element.trabajadora)) {
                         botonReservar.disabled = true;
                     }
@@ -136,8 +146,30 @@
             // Deberia ser == pero al no poder establecer un maximo en el seeder he puesto >=
             // Pero en produccion bastaria con == ya que se controla el maximo desde un principio
             if (numeroTrabajadoras >= 4) {
+                // Si el numero de trabajadoras es igual o mayor de 4, significa que todas estan ocupadas asi que bloqueo el boton de reservar cita
                 botonReservar.disabled = true
             }
+        }
+
+        function esFinDeSemana() {
+            let finDeSemana = false;
+            const numeroDia = new Date(fecha.value).getDay();
+            const dias = [
+                'domingo',
+                'lunes',
+                'martes',
+                'miércoles',
+                'jueves',
+                'viernes',
+                'sábado',
+            ];
+            const nombreDia = dias[numeroDia];
+            if (nombreDia == 'sábado' || nombreDia == 'domingo') {
+                finDeSemana = true;
+            } else {
+                finDeSemana = false;
+            }
+            return finDeSemana;
         }
 
         function coincideFechaYHora(element) {
@@ -153,7 +185,5 @@
             }
             return false;
         }
-
-        comprobarDisponibilidad();
     </script>
 @endsection
