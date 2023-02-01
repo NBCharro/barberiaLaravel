@@ -1,5 +1,5 @@
 @extends ('layout.mainLayout')
-@section('content-title', 'Peluqueria Laravel')
+@section('content-title', 'Barberia Laravel')
 {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
