@@ -1,4 +1,4 @@
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Empresa')
 @section('content-area')
     <h1 class="link-info h1 py-3">Sobre nosotras</h1>

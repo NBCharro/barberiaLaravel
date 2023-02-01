@@ -6,7 +6,7 @@
         $productosComprados = $_SESSION['productosComprados'];
     }
 @endphp
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Carrito')
 @section('content-area')
     @php

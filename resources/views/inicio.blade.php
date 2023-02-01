@@ -1,4 +1,4 @@
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Peluqueria Laravel')
 @section('content-area')
     <div id="inicio">

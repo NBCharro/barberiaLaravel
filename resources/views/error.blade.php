@@ -1,4 +1,4 @@
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Barberia Laravel')
 @section('content-area')
     <div class="alert alert-danger" role="alert">

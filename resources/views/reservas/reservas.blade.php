@@ -1,4 +1,4 @@
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Reservar cita')
 @section('content-area')
     <h1 class="link-info h1 py-3">Reservar cita</h1>

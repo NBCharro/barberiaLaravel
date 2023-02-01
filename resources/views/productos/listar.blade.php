@@ -1,11 +1,4 @@
-{{-- @php
-    if (isset($_SESSION['productosComprados'])) {
-        $productosComprados = $_SESSION['productosComprados'];
-    } else {
-        $_SESSION['productosComprados'] = [];
-    }
-@endphp --}}
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Catalogo de productos')
 @section('content-area')
     <h1 class="link-info h1 py-3">Catálogo de productos</h1>

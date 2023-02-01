@@ -1,4 +1,4 @@
-@extends('layout.mainLayout')
+@extends('layouts.mainLayout')
 @section('page-title', 'Reserva cita')
 @section('content-area')
     @php

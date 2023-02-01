@@ -1,4 +1,4 @@
-@extends ('layout.mainLayout')
+@extends ('layouts.mainLayout')
 @section('content-title', 'Carrito')
 @section('content-area')
     <h1 class="link-info h1">Compra realizada</h1>

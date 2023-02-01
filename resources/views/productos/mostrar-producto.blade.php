@@ -1,4 +1,4 @@
-@extends('layout.mainLayout')
+@extends('layouts.mainLayout')
 @section('content-title', 'Peluqueria Laravel')
 @section('content-area')
     <h1 class="link-info h1 py-3">{{ $producto->nombre }}</h1>
