@@ -41,35 +41,22 @@
                         Contacto
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('productos.index') }}"
-                        class="nav-link menu-item
-                        {{ Route::is('productos.index') || Route::is('productos.show') ? 'active' : 'link-info' }}
+                @if (Auth::check())
+                    <li class="nav-item">
+                        <a href="{{ route('productos.index') }}"
+                            class="nav-link menu-item
+                    {{ Route::is('productos.index') || Route::is('productos.show') ? 'active' : 'link-info' }}
                     ">
-                        Tienda
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('carrito') }}"
-                        class="nav-link menu-item {{ Route::is('carrito') || Route::is('agregarProductoCarrito') ? 'active' : 'link-info' }}">
-                        Carrito
-                    </a>
-                </li>
-
-                {{-- <li class="nav-item">
-                    <a href="{{ route('productos.index') }}"
-                        class="nav-link menu-item
-                        {{ Route::is('productos.index') || Route::is('productos.show') ? 'active' : 'link-info' }}
-                    ">
-                        Almacen
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('carrito') }}"
-                        class="nav-link menu-item {{ Route::is('carrito') || Route::is('agregarProductoCarrito') ? 'active' : 'link-info' }}">
-                        Pedido
-                    </a>
-                </li> --}}
+                            Tienda
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('carrito') }}"
+                            class="nav-link menu-item {{ Route::is('carrito') || Route::is('agregarProductoCarrito') ? 'active' : 'link-info' }}">
+                            Carrito
+                        </a>
+                    </li>
+                @endif
             </ul>
         </div>
     </nav>

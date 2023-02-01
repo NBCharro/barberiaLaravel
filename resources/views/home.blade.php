@@ -1,23 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    <h1 class="link-info h1">Bienvenido a tu cuenta</h1>
+    <hr>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+    @if (session('status'))
+        <div class="alert alert-success" role="alert">
+            {{ session('status') }}
         </div>
-    </div>
-</div>
+    @endif
+    <h2>¡Has iniciado sesión con éxito!</h2>
+    <p class="lead">
+        <a href="{{ route('productos.index') }}" class="btn btn-lg btn-info fw-bold border-white">
+            Ir a la tienda
+        </a>
+    </p>
 @endsection
