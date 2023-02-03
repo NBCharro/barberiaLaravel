@@ -1,48 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Feb 01, 2023 at 12:35 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `barberialaravel`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `reservas`
---
-
-CREATE TABLE `reservas` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `telefono` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fecha` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `hora` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `servicio` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `trabajadora` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `reservas`
---
 
 INSERT INTO `reservas` (`id`, `nombre`, `telefono`, `email`, `fecha`, `hora`, `servicio`, `trabajadora`, `created_at`, `updated_at`) VALUES
 (1, 'Efrain Hermiston', '+1-405-398-6902', 'hertha.sawayn@feil.biz', '2023-02-21', '20:00 - 21:00', 'Corte y arreglo de barba - 21€', 'Anna', '2023-01-26 06:27:40', '2023-01-26 06:27:40'),
@@ -145,28 +100,3 @@ INSERT INTO `reservas` (`id`, `nombre`, `telefono`, `email`, `fecha`, `hora`, `s
 (98, 'Lilyan White', '+12563273923', 'carolyne08@hotmail.com', '2023-02-05', '12:00 - 13:00', 'Corte de pelo - 14€', 'Anna', '2023-01-26 06:27:41', '2023-01-26 06:27:41'),
 (99, 'Elise Lockman MD', '1-732-859-7223', 'zpfeffer@gmail.com', '2023-02-17', '13:00 - 14:00', 'Corte y arreglo de barba - 21€', 'Andrea', '2023-01-26 06:27:41', '2023-01-26 06:27:41'),
 (100, 'Miss Jacinthe Gerlach DDS', '(614) 390-8791', 'randy55@gmail.com', '2023-02-01', '13:00 - 14:00', 'Corte y afeitado - 24€', 'Xhemi', '2023-01-26 06:27:41', '2023-01-26 06:27:41');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `reservas`
---
-ALTER TABLE `reservas`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `reservas`
---
-ALTER TABLE `reservas`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

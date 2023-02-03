@@ -53,7 +53,7 @@
                             </td>
                             <td class='text-table align-middle'>
                                 <select name="productos[{{ $producto['id'] }}]" id="productos[{{ $producto['id'] }}]"
-                                    class="form-select">
+                                    class="form-select" onchange="this.form.submit()">
                                     @for ($i = 0; $i <= intval($producto['stock']); $i++)
                                         <option {{ intval($producto['cantidad']) == $i ? 'selected' : '' }}>
                                             {{ $i }}
@@ -80,10 +80,6 @@
                 </tr>
             </tfoot>
         </table>
-        <p class="lead">
-            <input type="submit" class="btn btn-lg btn-info fw-bold border-white" value="Actualizar carrito"
-                id="botonActualizarCarrito">
-        </p>
     </form>
     <p class="lead">
         <button href="{{ route('compraRealizada') }}" class="btn btn-lg btn-info fw-bold border-white" id="botonComprar">

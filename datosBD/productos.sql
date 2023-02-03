@@ -1,48 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Feb 01, 2023 at 12:34 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `barberialaravel`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `productos`
---
-
-CREATE TABLE `productos` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `nombre` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fabricante` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `categoria` enum('Barba','Cabello','Complementos','Fijacion','Afeitado') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `precio` double(7,2) UNSIGNED NOT NULL,
-  `stock` int(10) UNSIGNED NOT NULL,
-  `descripcion` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `imagen` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `productos`
---
 
 INSERT INTO `productos` (`id`, `nombre`, `fabricante`, `categoria`, `precio`, `stock`, `descripcion`, `imagen`, `created_at`, `updated_at`) VALUES
 (1, 'Face Fresh Shaving Gel Gold', 'RedOne ', 'Afeitado', 6.31, 60, 'Gel de afeitar de textura ultra lubricante para un afeitado suave y limpio. ', 'FaceFreshShavingGelGold.jpg', '2023-01-28 16:30:18', '2023-02-01 09:40:10'),
@@ -95,28 +50,3 @@ INSERT INTO `productos` (`id`, `nombre`, `fabricante`, `categoria`, `precio`, `s
 (48, 'Peine de bolsillo en forma de navaja', 'Suavecito', 'Complementos', 43.67, 61, 'Saca cuando necesites tu peine en forma de navaja y date un retoque en los lugares más inesperados del planeta. Todo contra esos pelos rebeldes que se resisten.', 'Peinedebolsilloenformadenavaja.jpg', '2023-01-28 16:30:18', '2023-01-28 16:30:18'),
 (49, 'Camiseta de Barberia Laravel', 'Barberia Laravel', 'Complementos', 65.18, 17, 'Con el cambio de logo que hicimos recientemente hemos creado esta camiseta, pues a muchos les ha gustado el resultado y queríamos dar la oportunidad este año de dar más calidad en la camiseta que hacemos para nuestros clientes. ¿quieres conseguir tu camiseta?', 'logoCamiseta.jpg', '2023-01-28 16:30:18', '2023-01-28 16:30:18'),
 (50, 'Super hold pomade', 'Layrite', 'Cabello', 63.30, 23, 'Peinados extremos requieren de productos extremos, para ello Layrite ha creado Super Hold, una pomada basada en su fórmula original pero añadiendo cera de abeja para aumentar la fijación y dureza del peinado.', 'Superholdpomade.jpg', '2023-01-28 16:30:18', '2023-01-28 16:30:18');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `productos`
---
-ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `productos`
---
-ALTER TABLE `productos`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
