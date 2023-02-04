@@ -5,15 +5,6 @@
     <hr>
     <br>
     <div class="container">
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li><strong>{{ $error }}</strong></li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
         <main>
             <div class="row g-5">
                 <div class="col-md-5 col-lg-6">

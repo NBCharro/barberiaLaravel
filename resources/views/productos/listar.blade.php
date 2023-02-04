@@ -10,7 +10,7 @@
                 <th scope="col">NOMBRE</th>
                 <th scope="col">CATEGORIA</th>
                 <th scope="col">PRECIO</th>
-                <th scope="col">ACCIONES</th>
+                <th scope="col">DETALLE</th>
             </tr>
         </thead>
         <tbody>
