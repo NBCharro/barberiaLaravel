@@ -1,9 +1,6 @@
 @extends ('layouts.mainLayout')
 @section('content-title', 'Carrito')
 @section('content-area')
-    <h1 class="link-info h1">Compra realizada</h1>
-    <hr>
-    <br>
     @php
         $total = 0;
         foreach ($productosComprados as $producto) {
@@ -11,6 +8,9 @@
             $total += $precioTotalProducto;
         }
     @endphp
+    <h1 class="link-info h1">Compra realizada</h1>
+    <hr>
+    <br>
     <table class="table table-dark table-striped table-hover" id="tablaCompraRealizada">
         <thead class='bg-secondary text-white'>
             <tr class="table-active h5">

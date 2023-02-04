@@ -29,7 +29,7 @@
                     <div class="col d-flex flex-column gap-2">
                         <h4 class="fw-semibold mb-0 h3">Stock</h4>
                         <select name="cantidad" id="cantidad" class="form-select">
-                            @for ($i = 0; $i <= $producto->stock; $i++)
+                            @for ($i = 1; $i <= $producto->stock; $i++)
                                 <option>{{ $i }}</option>
                             @endfor
                         </select>

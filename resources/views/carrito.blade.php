@@ -5,17 +5,15 @@
         $_SESSION['productosComprados'] = [];
         $productosComprados = $_SESSION['productosComprados'];
     }
+    $total = 0;
+    foreach ($productosComprados as $producto) {
+        $precioTotalProducto = $producto['precio'] * $producto['cantidad'];
+        $total += $precioTotalProducto;
+    }
 @endphp
 @extends ('layouts.mainLayout')
 @section('content-title', 'Carrito')
 @section('content-area')
-    @php
-        $total = 0;
-        foreach ($productosComprados as $producto) {
-            $precioTotalProducto = $producto['precio'] * $producto['cantidad'];
-            $total += $precioTotalProducto;
-        }
-    @endphp
     <h1 class="link-info h1 py-3">Carrito</h1>
     <hr>
     <br>
@@ -90,7 +88,6 @@
     </p>
     <script>
         const tablaCarrito = document.getElementById("tablaCarrito");
-        const botonActualizarCarrito = document.getElementById("botonActualizarCarrito");
         const botonComprar = document.getElementById("botonComprar");
 
         if (tablaCarrito.children[1].firstElementChild.id == 'carritoVacio') {

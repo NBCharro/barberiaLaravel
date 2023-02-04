@@ -22,32 +22,7 @@ class MainController extends Controller
     public function carrito()
     {
         session_start();
-        // if (isset($_SESSION['productosComprados'])) {
-        //     $productosComprados = $_SESSION['productosComprados'];
-        // } else {
-        //     $_SESSION['productosComprados'] = [];
-        //     $productosComprados = $_SESSION['productosComprados'];
-        // }
-        // return view('carrito')->with(["productosComprados" => $productosComprados]);
         return view('carrito');
-    }
-
-    public function compraRealizada()
-    {
-        session_start();
-        $productosComprados = $_SESSION['productosComprados'];
-        session_destroy();
-
-        foreach ($productosComprados as $producto) {
-            // $producto = Producto::where('id', '=', $producto['id'])->get();
-            $stock = Producto::where('id', $producto['id']);
-            $stock->decrement(
-                'stock',
-                $producto['cantidad']
-            );
-        }
-
-        return view('compraRealizada')->with(['productosComprados' => $productosComprados]);
     }
 
     public function actualizarCarrito(Request $producto)
@@ -96,5 +71,22 @@ class MainController extends Controller
             }
         }
         return view('carrito');
+    }
+
+    public function compraRealizada()
+    {
+        session_start();
+        $productosComprados = $_SESSION['productosComprados'];
+        session_destroy();
+
+        foreach ($productosComprados as $producto) {
+            $stock = Producto::where('id', $producto['id']);
+            $stock->decrement(
+                'stock',
+                $producto['cantidad']
+            );
+        }
+
+        return view('compraRealizada')->with(['productosComprados' => $productosComprados]);
     }
 }
