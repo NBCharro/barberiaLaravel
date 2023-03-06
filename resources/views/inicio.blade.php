@@ -36,7 +36,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            <label for="email">{{ __('Email Address') }}</label>
+                            <label for="email">Introduce: user@email.com</label>
                         </div>
                         <div class="form-floating">
                             <input id="password" type="password"
@@ -48,7 +48,7 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                            <label for="password">{{ __('Password') }}</label>
+                            <label for="password">Introduce: password</label>
                         </div>
                         <div class="row mb-3">
                             <div class="form-check">
