@@ -48,7 +48,7 @@
                 <div class="row row-cols-4">
                     <div class="col">
                         <div class="card border-dark">
-                            <img src="./images/equipo/xhemi.jpg" class="card-img-top" alt="Fotografia de Xhemi">
+                            <img src="images/equipo/xhemi.jpg" class="card-img-top" alt="Fotografia de Xhemi">
                             <div class="card-body bg-dark text-light">
                                 <h5 class="card-title h3">Xhemi</h5>
                                 <p class="card-text">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="./images/equipo/guilherme.jpg" class="card-img-top" alt="Fotografia de Guilherme">
+                            <img src="images/equipo/guilherme.jpg" class="card-img-top" alt="Fotografia de Guilherme">
                             <div class="card-body bg-light text-dark">
                                 <h5 class="card-title h3">Guilherme</h5>
                                 <p class="card-text">
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col">
                         <div class="card border-dark">
-                            <img src="./images/equipo/andrea.jpg" class="card-img-top" alt="Fotografia de Andrea">
+                            <img src="images/equipo/andrea.jpg" class="card-img-top" alt="Fotografia de Andrea">
                             <div class="card-body bg-dark text-light">
                                 <h5 class="card-title h3">Andrea</h5>
                                 <p class="card-text">
@@ -95,7 +95,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="./images/equipo/anna.jpg" class="card-img-top" alt="Fotografia de Anna">
+                            <img src="images/equipo/anna.jpg" class="card-img-top" alt="Fotografia de Anna">
                             <div class="card-body bg-light text-dark">
                                 <h5 class="card-title h3">Anna</h5>
                                 <p class="card-text">

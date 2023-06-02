@@ -18,7 +18,7 @@
             </p>
         </div>
         <div class="col-md-5">
-            <img src="./images/servicios/ninios.jpg" width="100%" alt="Corte peluquería a niños">
+            <img src="images/servicios/ninios.jpg" width="100%" alt="Corte peluquería a niños">
         </div>
     </div>
 
@@ -42,7 +42,7 @@
             </p>
         </div>
         <div class="col-md-5 order-md-1">
-            <img src="./images/servicios/domicilio.jpg" width="100%" alt="Servicio a domicilio">
+            <img src="images/servicios/domicilio.jpg" width="100%" alt="Servicio a domicilio">
         </div>
     </div>
 
@@ -67,7 +67,7 @@
             </p>
         </div>
         <div class="col-md-5">
-            <img src="./images/servicios/express.jpg" width="100%" alt="Servicio express">
+            <img src="images/servicios/express.jpg" width="100%" alt="Servicio express">
         </div>
     </div>
 @endsection

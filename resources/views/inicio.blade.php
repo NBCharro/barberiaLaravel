@@ -2,7 +2,7 @@
 @section('content-title', 'Peluqueria Laravel')
 @section('content-area')
     <div id="inicio">
-        <img class="mb-4" class="rounded mx-auto d-block" src="./images/logoCompletoNegro.png" alt="Logo Barberia Laravel"
+        <img class="mb-4" class="rounded mx-auto d-block" src="images/logoCompletoNegro.png" alt="Logo Barberia Laravel"
             width="250" height="100">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <p class="lead">
