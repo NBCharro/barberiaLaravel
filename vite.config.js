@@ -9,6 +9,13 @@ export default defineConfig({
                 'resources/js/app.js',
             ],
             refresh: true,
+            https: {
+                enabled: true,
+                rewrite: {
+                    from: 'http://www.barberialaravel.ovh',
+                    to: 'https://www.barberialaravel.ovh',
+                },
+            },
         }),
     ]
 });
