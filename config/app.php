@@ -55,7 +55,7 @@ return [
     */
 
     // 'url' => env('APP_URL', 'http://localhost'),
-    'url' => env('APP_URL', 'http://0.0.0.0'),
+    'url' => env('APP_URL', 'https://www.barberialaravel.ovh'),
 
     'asset_url' => env('ASSET_URL'),
 
