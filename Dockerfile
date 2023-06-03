@@ -39,10 +39,10 @@ RUN composer install
 # Instalar dependencias de NPM
 RUN npm install
 
-RUN cp .env.example .env
+# RUN cp .env.example .env
 
 # Generar la clave de la aplicacion
-RUN php artisan key:generate
+# RUN php artisan key:generate
 
 # Compilar el proyecto
 RUN npm run build

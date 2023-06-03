@@ -13,7 +13,9 @@
     <title>@yield('content-title')</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+    <script src="{{ secure_asset('js/app.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css') }}">
 </head>
 
 <body class="text-center text-bg-dark">
