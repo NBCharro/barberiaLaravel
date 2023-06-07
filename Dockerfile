@@ -60,5 +60,8 @@ COPY laravel.conf /etc/apache2/sites-available/000-default.conf
 # Habilitar la reescritura de URL en Apache
 RUN a2enmod rewrite
 
+# Configurar el nombre de dominio completamente calificado en Apache
+RUN echo "ServerName www.barberialaravel.ovh" >> /etc/apache2/apache2.conf
+
 # Comando de inicio del contenedor
 CMD ["apache2-foreground"]
