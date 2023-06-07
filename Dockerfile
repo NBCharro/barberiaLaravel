@@ -30,21 +30,11 @@ WORKDIR /var/www/html
 # Habilitar la extension bcmath en el entorno de PHP
 RUN docker-php-ext-install bcmath
 
-# Instalar dependencias de Composer
+# Limpiar y compilar el proyecto
+RUN rm -rf vendor node_modules
 RUN composer update --with-all-dependencies
-
-# Instalar dependencias de Composer
 RUN composer install
-
-# Instalar dependencias de NPM
-RUN npm install
-
-# RUN cp .env.example .env
-
-# Generar la clave de la aplicacion
-# RUN php artisan key:generate
-
-# Compilar el proyecto
+RUN npm ci
 RUN npm run build
 
 # Configurar Apache para escuchar en todas las interfaces en el puerto proporcionado por Railway
