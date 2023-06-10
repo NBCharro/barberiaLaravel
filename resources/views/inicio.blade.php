@@ -50,13 +50,13 @@
                             @enderror
                             <label for="password">Introduce: password</label>
                         </div>
-                        <div class="row mb-3">
+                        {{-- <div class="row mb-3">
                             <div class="form-check">
                                 <input type="checkbox" name="remember" id="remember"
                                     {{ old('remember') ? 'checked' : '' }}>
                                 <label class="form-check-label" for="remember">Recordar usuario y contraseña</label>
                             </div>
-                        </div>
+                        </div> --}}
                         <div>
                             <button type="submit" class="btn btn-lg btn-info fw-bold border-white">Login</button>
                             <a href="{{ route('register') }}" class="btn btn-lg btn-info fw-bold border-white">
