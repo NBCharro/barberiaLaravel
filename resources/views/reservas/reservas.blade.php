@@ -14,36 +14,34 @@
         </div>
         <hr />
     @endif
-    <div class="container text-center">
+    <div class="container">
         <div class="row">
             <div class="col"></div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <form action="{{ route('reservas.store') }}" method="post" class="needs-validation">
                     @csrf
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-md-6 py-3">
                             <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"
                                 value="{{ old('nombre') }}">
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-6 py-3">
                             <label for="telefono" class="form-label">Teléfono</label>
                             <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono"
                                 value="{{ old('telefono') }}">
                         </div>
-
-                        <div class="col-12 py-5">
+                        <div class="col-12 py-3">
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="nombre@email.com" value="{{ old('email') }}">
                         </div>
-
-                        <div class="col-sm-6">
+                        <div class="col-md-6 py-3">
                             <label for="fecha" class="form-label">Fecha</label>
                             <input type="date" class="form-control" id="fecha" name="fecha"
                                 min="{{ $tomorrow }}" value="{{ old('fecha') ? old('fecha') : $tomorrow }}">
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6 py-3">
                             <label for="hora" class="form-label">Hora</label>
                             <select name="hora" id="hora" class="form-select">
                                 <option {{ old('hora') == '10:00 - 11:00' ? 'selected' : '' }}>10:00 - 11:00</option>
@@ -58,8 +56,7 @@
                                 <option {{ old('hora') == '20:00 - 21:00' ? 'selected' : '' }}>20:00 - 21:00</option>
                             </select>
                         </div>
-
-                        <div class="col-sm-6 py-5">
+                        <div class="col-md-6 py-3">
                             <label for="servicio" class="form-label">Servicio</label>
                             <select name="servicio" id="servicio" class="form-select">
                                 <option {{ old('servicio') == 'Corte de pelo - 14€' ? 'selected' : '' }}>Corte de pelo -
@@ -82,7 +79,7 @@
                                     Corte, arreglo y perfilado de barba - 25€</option>
                             </select>
                         </div>
-                        <div class="col-sm-6 py-5">
+                        <div class="col-md-6 py-3">
                             <label for="trabajadora" class="form-label">Trabajadora</label>
                             <select name="trabajadora" id="trabajadora" class="form-select">
                                 <option selected>Cualquiera</option>
@@ -92,19 +89,14 @@
                                 <option {{ old('trabajadora') == 'Anna' ? 'selected' : '' }}>Anna</option>
                             </select>
                         </div>
-
-
-                        <hr class="my-4">
-
-                        <div class="w-25"></div>
-
-                        <button class="w-50 btn btn-lg btn-info fw-bold border-white" type="submit" id="botonReservar">
-                            Reservar cita
-                        </button>
+                        <div class="col-12 my-4 text-center">
+                            <button class="btn btn-lg btn-info fw-bold border-white" type="submit" id="botonReservar">
+                                Reservar cita
+                            </button>
+                        </div>
                     </div>
                 </form>
             </div>
-
             <div class="col"></div>
         </div>
     </div>

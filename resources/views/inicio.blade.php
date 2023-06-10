@@ -63,10 +63,6 @@
                                 Registrarse
                             </a>
                         </div>
-                        @if (Route::has('password.request'))
-                            <a class="btn btn-link text-warning" href="{{ route('password.request') }}">¿Has olvidado la
-                                contraseña?</a>
-                        @endif
                     </form>
                 @endif
             </div>
