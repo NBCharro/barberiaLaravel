@@ -41,12 +41,12 @@
             </div>
         </div>
 
-        <div class="p-5 mb-4 rounded-3">
+        <div class="py-5 mb-4 rounded-3">
             <div class="container-fluid">
                 <h2 class="display-5 fw-bold">Equipo</h2>
                 <hr class="featurette-divider">
-                <div class="row row-cols-4">
-                    <div class="col">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                    <div class="col mb-2">
                         <div class="card border-dark">
                             <img src="images/equipo/xhemi.jpg" class="card-img-top" alt="Fotografia de Xhemi">
                             <div class="card-body bg-dark text-light">
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-2">
                         <div class="card">
                             <img src="images/equipo/guilherme.jpg" class="card-img-top" alt="Fotografia de Guilherme">
                             <div class="card-body bg-light text-dark">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-2">
                         <div class="card border-dark">
                             <img src="images/equipo/andrea.jpg" class="card-img-top" alt="Fotografia de Andrea">
                             <div class="card-body bg-dark text-light">
@@ -93,7 +93,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-2">
                         <div class="card">
                             <img src="images/equipo/anna.jpg" class="card-img-top" alt="Fotografia de Anna">
                             <div class="card-body bg-light text-dark">
@@ -111,5 +111,6 @@
                 </div>
             </div>
         </div>
+
     </div>
 @endsection
